@@ -1,0 +1,41 @@
+body
+{
+  font-family: 'Poppins', sans-serif;
+  background: url(../images/fond_02.jpg);
+  background-size: 100%;
+  background-position: 50% 35%;
+  background-repeat:no-repeat;
+}
+
+/*Barre de recherche*/
+.search-form{
+    text-align: center;
+  }
+  .search-form input{
+    margin-top:30px;
+    border-radius:25px;
+    cursor:pointer;
+    cursor:text;
+    height:25px;
+    background-color:white;
+    outline:none;
+    background-image:url("https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-search-strong-256.png");
+    background-size:25px;
+    background-position:50%;
+    font-size:18px;
+    color:grey;
+    background-repeat:no-repeat;
+    border:1px solid grey;
+    padding-left:40px;
+    padding-right:20px;
+    background-position:5px;
+  }
+
+.back a{
+    color: rgb(71, 70, 70);
+    text-decoration: none;
+}
+
+.search-form input{
+    opacity: 0.75;
+}

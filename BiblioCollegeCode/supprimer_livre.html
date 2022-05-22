@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+
+$("document").ready(function(){
+  
+$("#isbn").on('input',function(){
+	$.post("titre_isbn.php",{ isbn : $("#isbn").val()},function(data){
+	$("#titre").val(data);
+  });
+});
+
+$("#titre").on('input',function(){
+	$.post("titre_isbn.php",{titre: $("#titre").val()}, function(data){
+	$("#isbn").val(data);
+  });
+});
+ 
+$(" #sup_form ").submit( function(e) {
+	e.preventDefault();
+	
+	$.post("supprimer.php",
+	{ 
+	isbn	: $("#isbn").val(), 
+	titre 	: $("#titre").val() 
+	},function(data){
+	alert(data);
+	//redirection
+  });
+	
+});
+ 
+});
+ 
+</script>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<h1>Biblio-Collège</h1><br/>
+<h3>+Supprimer un livre</h3><br/>
+<h6 style="color:red; margin-left: 30px;">*Saisir l'un des deux</h6>
+
+<form method="POST" id="sup_form" action="#" style="margin-left: 30px;">
+<label for="isbn">ISBN:</label><br/>
+<input type="text" id="isbn" name="isbn" required><br/>
+<label for="nom">Titre:</label><br/>
+<input type="text" id="titre" name="titre" required><br/>
+<input type="submit" id="" name="" value="Supprimer">
+</form>

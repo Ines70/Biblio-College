@@ -1,0 +1,114 @@
+
+ 
+ a:hover{
+  text-decoration: none;
+}
+
+/*header*/
+.header{
+  background-color: #3498DB;
+  height: 150px;
+}
+
+/*logo*/
+.logo
+{
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  float: left;
+  margin-top: 2%;
+}
+
+/*menu*/
+.menu{
+  float: right;
+  
+}
+
+.menu, a,p{
+  margin-right: 100px;
+  margin-top: 2%;
+}
+.menu a:hover{
+  color:white;
+}
+
+.nav, a{
+  text-decoration: none;
+}
+/*container*/
+.container-fluid{
+  padding:O;
+}
+
+.container{
+  width: 100%;
+  max-width: 100%;
+}
+
+.search-container {
+  float: right;
+}
+
+.search-container input[type=text] {
+  padding: 6px;
+  margin-top: 18px;
+  margin-right: 400px;
+  width: 500px;
+  font-size: 17px;
+  border: none;
+}
+
+.search-container button {
+  position: absolute;
+  width: 50px;
+  padding: 6px ;
+  top: 10px;
+  left: 60%;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  
+}
+.search-container2 button {
+  position: absolute;
+  width: 50px;
+  padding: 6px ;
+  margin-top: 18px;
+  margin-right: 500px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+background: #ccc;
+}
+.r{
+    border-radius: 1px solid;
+    display: flex;
+}
+
+.titre,.an,.duree,.iso,.genre,.image{
+  
+  display:inline-block;
+  vertical-align: top;
+  margin-top: 10px;
+}
+
+.gauche{
+  float: left;
+  margin-left: 25px;
+}
+
+
+img{
+  float: left;
+  max-width: 250px;
+  margin-left: 25px;
+  margin-top: 10px;
+}

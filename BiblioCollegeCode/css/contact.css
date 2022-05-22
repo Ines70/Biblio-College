@@ -1,0 +1,15 @@
+
+body
+{
+  font-family: "Gill Sans", sans-serif;
+  background: url(../images/fond_04.jpg);
+  background-size: 100%;
+}
+
+center {
+    display: block;
+    text-align: -webkit-center;
+    background-color:bisque;
+    margin-left: 300px;
+    margin-right: 300px;
+     }

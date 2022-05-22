@@ -1,0 +1,60 @@
+/*mise css menu deroulante*/
+*{
+    box-sizing: border-box;
+}
+body{
+  
+}
+
+
+a{
+    text-decoration: none;
+}
+
+header{
+    background-color:#C0C0C0;
+    
+  }
+header li{
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    border-bottom: 1px solid #eee;
+}
+header li a{
+    display: block;
+    padding:20px;
+}
+header li a:hover{
+    background-color: #355e94;
+    color: #fff;
+}
+header li:hover .sous-menu{
+    display: block;
+}
+
+
+ 
+  .menu-nav{
+      margin: 0 auto;
+      width: 1000px;
+  }
+
+  .sous-menu{
+      display: none;
+      position: absolute;
+      background-color: #C0C0C0
+      width: 200px; 
+  }
+  .sous-menu li{
+    display: block;
+  }
+  .sous-menu li a {
+    color: #fff;
+  }
+  .sous-menu li:hover a{
+      background-color: #C0C0C0;
+      color:#355e94 ;
+  }

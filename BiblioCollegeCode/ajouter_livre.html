@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+
+$("document").ready(function(){
+ 
+$(" #ajout_form ").submit( function(e) {
+	e.preventDefault();
+	
+	$.post("ajouter.php",
+	{ 
+	isbn	: $("#isbn").val(), 
+	titre 	: $("#titre").val(), 
+	categorie : $("#categorie").val(), 
+	parution   : $("#parution").val(), 
+	exemplaire : $("#exemplaire").val(), 
+	nom		: $("#nom").val(), 
+	prenom	: $("#prenom").val() 
+	},function(data){
+	alert(data);
+	//redirection
+  });
+	
+});
+ 
+});
+ 
+</script>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<form id="ajout_form" method="post" action="ajouter.php" style="margin-left: 30px;">
+
+<h1>Biblio-Collège</h1>
+<h2>+ Ajouter un livre </h2>
+
+<h6>Informations sur le livre </h6>
+
+<label for="isbn">ISBN:</label></br>
+<input type="text" id="isbn" name="isbn" placeholder="000000000000" required></br>
+<label for="titre">Titre:</label></br>
+<input type="text" id="titre" name="titre" placeholder="Titre" required></br>
+<label for="categorie">Catégorie:</label></br>
+<input type="text" id="categorie" name="categorie" placeholder="Categorie"   required></br> 
+<label for="parution">Parution:</label></br>
+<input type="number" id="parution" min="0000" name="parution" value="1800" required> </br>
+<label for="exemplaire">Nombre d'exemplaire:</label> </br>
+<input type="number" id="exemplaire" min="0" value="0" name="exemplaire" required> <br><br>
+
+<h6>Informations sur l'auteur</h6>
+
+<label for="nom">Nom:</label></br>
+<input type="text" class="auteur" id="nom"  placeholder="000000000000" name="nom" required></br>
+<label for="prenom">Prénom:</label></br>
+<input type="text" class="auteur" id="prenom" placeholder="000000000000" name="prenom" required><br></br>
+<input type="submit" id="valider" name="" value="Ajouter un livre"></br>
+
+
+</form>
+</body>
+</html>
